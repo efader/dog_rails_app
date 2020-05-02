@@ -11,7 +11,7 @@ All tasks are completed. Where there was ambiguity in design or implementation, 
 
 > Associate dogs with owners
 
-* Completed. I created a "claim" feature to make this easier for me to test this and other features. Dogs are not automatically assigned to owners when created.
+* Completed. I created a "claim" feature to make it easier for me to test this and other features. Dogs are not automatically assigned to owners when created.
 
 > Allow editing only by owner
 
