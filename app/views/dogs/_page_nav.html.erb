@@ -1,0 +1,23 @@
+<% if @page > 1 %>
+    <%= link_to "<< First", @permit_params.merge(page: 1) %>
+    <%= link_to "< Prev", @permit_params.merge(page: @page - 1) %>
+<% end %>
+
+<% (1..@num_pages).each do |pa| %>
+    <% if @page == pa %>
+        <%= pa %>
+    <% else %>
+        <%= link_to pa, @permit_params.merge(page: pa) %>
+    <% end %>
+<% end %>
+
+<% if @page < @num_pages %>
+    <%= link_to "Next >", @permit_params.merge(page: @page + 1) %>
+    <%= link_to "Last >>", @permit_params.merge(page: @num_pages) %>
+<% end %>
+<br>
+<% if @sort_order != "likes" %>
+    <%= link_to "Sort by likes", @permit_params.merge(sort_order: "likes") %>
+<% else %>
+    <%= link_to "Show all dogs", @permit_params.merge(sort_order: "none") %>
+<% end %>

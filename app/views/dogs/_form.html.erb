@@ -1,7 +1,12 @@
-<%= simple_form_for @dog do |f| %>
+<%= simple_form_for @dog, html: {multipart: true} do |f| %>
   <%= f.input :name %>
   <%= f.input :description, as: :text %>
-  <%= f.input :image, as: :file %>
+
+  <% @upload_number.times do |i| %>
+      <%= label_tag "dog[images][]", "Image" %>
+      <%= file_field_tag "dog[images][]", type: :file %>
+      <br>
+  <% end %>
 
   <% if @dog.images.any? %>
     <%= image_tag @dog.images.first %>

@@ -1,13 +1,30 @@
 <section>
   <h2><%= @dog.name %></h2>
+  <% if @likes_this_dog %>
+    You like this dog!
+    <br>
+  <% elsif !@is_owner %>
+    <%= link_to "Like this dog!", like_dog_path, method: :post %>
+    <br>
+  <% end %>
 
+  <% if @is_owner %>
+    This is your dog!
+    <br>
+  <% elsif @can_claim %>
+    <%= link_to "This is my dog.", claim_dog_path, method: :post %>
+    <br>
+  <% end %>
+  
   <% @dog.images.each do |image| %>
     <%= image_tag url_for(image), alt: "Photo of #{@dog.name}" %>
   <% end %>
 
   <p><%= @dog.description %></p>
 
-  <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
-  <br>
-  <%= link_to "Delete #{@dog.name}'s Profile", dog_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if @is_owner %>
+    <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
+    <br>
+    <%= link_to "Delete #{@dog.name}'s Profile", dog_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </section>
