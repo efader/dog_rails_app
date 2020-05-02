@@ -7,7 +7,7 @@ All tasks are completed. Where there was ambiguity in design or implementation, 
 
 > Add the ability to for a user to input multiple dog images on an edit form or new dog form
 
-* Completed. Number of images is somewhat impractically changed with query parameters, but I believe the challenege at the heart of the task is addressed. A future improvement would be to dynamically create a new image upload field with client-side templating after each successive image is selected.
+* Completed. Number of images is somewhat impractically changed with query parameters, but I believe the challenge at the heart of the task is addressed. A future improvement would be to dynamically create a new image upload field with client-side templating after each successive image is selected.
 
 > Associate dogs with owners
 
