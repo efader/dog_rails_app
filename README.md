@@ -19,7 +19,7 @@ All tasks are completed. Where there was ambiguity in design or implementation, 
 
 > Allow users to like other dogs (not their own)
 
-* Completed. Dogs cannot be unliked. Dogs can be liked multiple times by the same user, although this is not exposed in the UI.
+* Completed. Dogs cannot be unliked. Dogs can be liked multiple times by the same user, although this is not exposed in the UI. Dogs can be liked and then claimed by the same user, which may not be considered an acceptable state.
 
 > Allow sorting the index page by number of likes in the last hour
 
